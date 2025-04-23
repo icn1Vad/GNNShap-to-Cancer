@@ -1,0 +1,28 @@
+root@autodl-container-e89b48b1ac-293a7d7f:~/2025/GNNShap# python run_gnnshap.py --dataset CGMega --num_samples 25000 --sampler GNNShapSampler --batch_size 1024 --repeat 1
+GNNShap explanations - run1:   1%|▌                                                      | 1/100 [00:00<00:40,  2.46it/s]Node 28 has failed. General error: Number of players should be greater than 1
+explainer.py:370:WARNING: Switching to WLRSolver. Reason: large number of players: 13072
+GNNShap explanations - run1:   6%|███▎                                                   | 6/100 [00:02<00:41,  2.25it/s]Node 129 has failed. General error: Number of players should be greater than 1
+GNNShap explanations - run1:  12%|██████▍                                               | 12/100 [00:03<00:24,  3.59it/s]Node 199 has failed. General error: Number of players should be greater than 1
+explainer.py:370:WARNING: Switching to WLRSolver. Reason: large number of players: 18065
+GNNShap explanations - run1:  17%|█████████▏                                            | 17/100 [00:06<00:33,  2.45it/s]explainer.py:370:WARNING: Switching to WLRSolver. Reason: large number of players: 88731
+GNNShap explanations - run1:  19%|██████████▎                                           | 19/100 [00:21<02:15,  1.68s/it]Node 456 has failed. General error: Number of players should be greater than 1
+GNNShap explanations - run1:  22%|███████████▉                                          | 22/100 [00:21<01:22,  1.06s/it]Node 850 has failed. General error: Number of players should be greater than 1
+explainer.py:370:WARNING: Switching to WLRSolver. Reason: large number of players: 8797
+GNNShap explanations - run1:  27%|██████████████▌                                       | 27/100 [00:23<00:48,  1.52it/s]Node 998 has failed. General error: Number of players should be greater than 1
+GNNShap explanations - run1:  32%|█████████████████▎                                    | 32/100 [00:24<00:31,  2.14it/s]Node 1229 has failed. General error: Number of players should be greater than 1
+explainer.py:370:WARNING: Switching to WLRSolver. Reason: large number of players: 24417
+GNNShap explanations - run1:  35%|██████████████████▉                                   | 35/100 [00:28<00:48,  1.33it/s]Node 1275 has failed. General error: Number of players should be greater than 1
+explainer.py:370:WARNING: Switching to WLRSolver. Reason: large number of players: 7967
+GNNShap explanations - run1:  40%|█████████████████████▌                                | 40/100 [00:30<00:32,  1.82it/s]explainer.py:370:WARNING: Switching to WLRSolver. Reason: large number of players: 53558
+GNNShap explanations - run1:  41%|██████████████████████▏                               | 41/100 [00:38<01:59,  2.02s/it]Node 1562 has failed. General error: Number of players should be greater than 1
+explainer.py:370:WARNING: Switching to WLRSolver. Reason: large number of players: 13043
+GNNShap explanations - run1:  56%|██████████████████████████████▏                       | 56/100 [00:40<00:22,  1.92it/s]Node 1754 has failed. General error: Number of players should be greater than 1
+explainer.py:370:WARNING: Switching to WLRSolver. Reason: large number of players: 16442
+GNNShap explanations - run1:  59%|███████████████████████████████▊                      | 59/100 [00:43<00:24,  1.67it/s]explainer.py:370:WARNING: Switching to WLRSolver. Reason: large number of players: 34847
+GNNShap explanations - run1:  60%|████████████████████████████████▍                     | 60/100 [00:49<00:40,  1.00s/it]Node 1834 has failed. General error: Number of players should be greater than 1
+GNNShap explanations - run1:  69%|█████████████████████████████████████▎                | 69/100 [00:49<00:15,  2.02it/s]Node 2227 has failed. General error: Number of players should be greater than 1
+explainer.py:370:WARNING: Switching to WLRSolver. Reason: large number of players: 47625
+GNNShap explanations - run1:  73%|███████████████████████████████████████▍              | 73/100 [00:56<00:22,  1.19it/s]Node 2335 has failed. General error: Number of players should be greater than 1
+explainer.py:370:WARNING: Switching to WLRSolver. Reason: large number of players: 7730
+GNNShap explanations - run1:  99%|█████████████████████████████████████████████████████▍| 99/100 [00:58<00:00,  3.39it/s]explainer.py:370:WARNING: Switching to WLRSolver. Reason: large number of players: 8409
+GNNShap explanations - run1: 100%|█████████████████████████████████████████████████████| 100/100 [00:59<00:00,  1.67it/s]
