@@ -1,88 +1,27 @@
-# GNNShap: Scalable and Accurate GNN Explanation using Shapley Values
-This repository contains the source code of
-`GNNShap: Scalable and Accurate GNN Explanation using Shapley Values` paper accepted in The
-Web Conference 2024.
+# GNNShap-to-Cancer
 
-### Setup
-Our implementation is based on PyTorch and PYG. Also, Our Shapley sampling strategy is implemented 
-in Cuda. Therefore, GNNShap requires a GPU with Cuda support.
+Undergraduate thesis experiments adapting **GNNShap-based graph explanations** to cancer-related gene data. The repository contains upstream GNNShap components alongside dataset-adaptation files and historical run records.
 
-First install PyTorch with GPU support from [here](https://pytorch.org/get-started/locally/) and 
-make sure PyTorch is using GPU.  
+**PyTorch · PyTorch Geometric · Graph explanations · MCF7 / CGMega data**
 
-The rest of the required packages and versions are provided in the `requirements.txt` file.
+[Project case study](https://icn1vad.github.io/projects/gnnshap/) · [Adaptation and reproduction notes](docs/RESEARCH_NOTES.md) · [Original upstream README](docs/UPSTREAM_GNNSHAP.md)
 
-You can install the requirements by running:
-```bash
-pip install -r requirements.txt
-```
+## What is upstream
 
-### Dataset Configs
+GNNShap is the work of **Selahattin Akkas and Ariful Azad**, published at The Web Conference 2024. This repository does not claim authorship of the GNNShap method, its general benchmark implementation, or the upstream pretrained artifacts. The original setup instructions and citation are retained separately.
 
-Dataset and dataset-specific model configurations are in the `dataset/configs.py` file.
+## Thesis focus
 
+My work concerns dataset and model-input alignment, label and mask handling, and sampling / weighted-least-squares explanation experiments for cancer-related graph data. The repository includes `data_preprocess_cv.py`, MCF7 dataset artifacts, configuration files, and an execution log.
 
-### Model training  
+The historical log also records solver fallback and failures for some nodes. Finishing an iteration loop is not evidence that every explanation succeeded. No new accuracy gain, publication, or medical usefulness is claimed here.
 
-We provided pretrained models in the `pretrained` folder.
+## Start with the records
 
-To train Cora, CiteSeer, PubMed, Coauthor-CS, Coauthor-Physics, and Facebook datasets: 
-```bash
-python train.py --dataset Cora
-```
+Read [the research notes](docs/RESEARCH_NOTES.md) before attempting a run. The upstream CUDA / PyG environment and project-specific dataset configuration require a separate reproduction check. The portfolio documentation change does not rerun the GPU experiments.
 
-Reddit and ogbn-products require `NeighborLoader` for training. To train them:
-```bash
-python train_large.py --dataset Reddit
-```
+## Citation
 
-### Experiments
+Selahattin Akkas and Ariful Azad. 2024. *GNNShap: Scalable and Accurate GNN Explanation using Shapley Values*. Proceedings of the ACM Web Conference 2024.
 
-We provided scripts for baselines and GNNShap experiments. Scripts will save explanation results to
-the results folder. Note that scripts repeat each experiment five times. This can be changed in the 
-scripts.
-
-For baselines, you can use the following script. For individual baseline, you can refer to 
-the script file content.
-
-```bash
-./run_baseline_experiments.sh
-```
-
-For GNNShap experiments, you can use the following script:
-```
-./run_gnnshap_experiments.sh
-```
-
-- _We ran experiments on a GPU with 24GB of memory. You may need to adjust `batch_size` 
-and `num_samples` parameters if you have less GPU memory._
-- _The first run might take some time: it needs to compile the Cuda code._
-
-For individual dataset experiments, an example is provided below:
-```bash
-python run_gnnshap.py --dataset Cora --num_samples 25000 --sampler GNNShapSampler 
---batch_size 1024 --repeat 1
-```
-
-The results will be saved to the `results` folder. The default result folder can be changed 
-in `dataset/configs.py`
-
-
-### Evaluation
-We used the `BaselinesEvaluation.ipynb`  notebook under the `examples` folder for explanation times
-and fidelity results.
-
-### Visualization
-We provided explanation visualization examples in the `Visualization.ipynb`  notebook 
-under `examples.`
-
-### Custom Model & Data Explanations
-We provided an example in the `CustomModelData.ipynb`  notebook under `examples`.
-
-### Citation
-Please cite our work if you find it useful.
-
-```
-Selahattin Akkas and Ariful Azad. 2024. GNNShap: Scalable and Accurate GNN Explanation using Shapley Values.
-In Proceedings of the ACM Web Conference 2024 (WWW ’24), May 13–17, 2024, Singapore, Singapore.
-```
+The original repository license is preserved in [LICENSE](LICENSE).
